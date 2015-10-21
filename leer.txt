@@ -1,0 +1,3 @@
+Fuente: font-family: 'Open Sans', sans-serif; (open sans de google fonts).
+Jquery desde CDN en el footer.
+Panel: panel.css y panel.js para diferenciar.
