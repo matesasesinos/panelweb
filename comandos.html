@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Comandos GIT</title>
+</head>
+
+<body>
+<h2>iniciar git</h2>
+<p>Para ello crearemos un fichero .gitignore en el directorio ráiz del proyecto con el siguiente contenido:</p>
+<code># Ignores
+\.DS_Store
+\.classpath
+\.project
+\.settings
+\.metadata/
+Servers/
+target/</code>
+<p>Una vez instalado, lo primero que tenemos que hacer es configurar nuestro nombre y nuestro email para que Git pueda “firmar” nuestros commits. De esta forma estaremos identificando que ese commit, que ese cambio en el código, es nuestro.
+<br>
+$ git config --global user.name "Alejandro Perez Garcia"
+<br>
+$ git config --global user.email "alejandropg@autentia.com"
+<br>
+quitar --global para hacerlo adentro del mismo proyecto
+</p>
+<p>Otra configuración interesante puede ser:<br>
+
+$ git config --global color.status auto<br>
+
+$ git config --global color.branch auto<br>
+
+$ git config --global color.diff auto<br>
+
+$ git config --global color.interactive auto<br></p>
+<h2>Generar clave</h2>
+<code>ssh-keygen -t rsa -C "your_email@yourcompany.com"</code>
+<p>Ahora dentro del sitio de GitHub en “Account Settings” > “SSH Public Keys” > “Add another public key”, denemos añadir el contenido del fichero id_rsa.pub generado en /Users/your_user_directory/.ssh/</p>
+<p>Para comprobar la configuración debemos ejecutar lo siguiente: ssh git@github.com
+</p>
+<h2>Iniciar proyecto</h2>
+<p>git init</p>
+<p>agregar: git add * o git add archivo.html</p>
+<p>setado: git status</p>
+<p>subir:   git commit -m 'Subo la estructura del proyecto al repositorio de GitHub'<br>
+  git remote add origin git@github.com:my_company/my_project.git<br>
+  git push -u origin master</p>
+</body>
+</html>
